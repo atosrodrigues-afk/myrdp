@@ -30,7 +30,7 @@ jobs:
           Restart-Service -Name TermService -Force
 
             - name: Create RDP User with Secure Password
-        run: |
+         
           # Use a senha do segredo do GitHub para maior segurança
           $password = "${{ secrets.RDP_PASSWORD }}"
           $securePass = ConvertTo-SecureString $password -AsPlainText -Force
